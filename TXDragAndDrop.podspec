@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "TXDragAndDrop"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of TXDragAndDrop."
+  s.version          = "1.0.0"
+  s.summary          = "UIView+DragAndDrop category - adds UIView draggable capability"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/TXDragAndDrop"
+  s.homepage         = "https://github.com/rtoshiro/TXDragAndDrop"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "rtoshiro" => "rtoshiro@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/TXDragAndDrop.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/rtoshiro/TXDragAndDrop.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
