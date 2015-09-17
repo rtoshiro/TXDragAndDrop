@@ -1,0 +1,6 @@
+framework module TXDragAndDrop {
+  umbrella header "TXDragAndDrop-umbrella.h"
+
+  export *
+  module * { export * }
+}

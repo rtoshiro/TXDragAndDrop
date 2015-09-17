@@ -7,6 +7,7 @@
 //
 
 #import "TXViewController.h"
+#import "UIView+DragAndDrop.h"
 
 @interface TXViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  [self.myview setDraggingEnabled:YES];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

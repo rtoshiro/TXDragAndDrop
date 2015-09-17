@@ -1,0 +1,6 @@
+framework module TXSwizzling {
+  umbrella header "TXSwizzling-umbrella.h"
+
+  export *
+  module * { export * }
+}

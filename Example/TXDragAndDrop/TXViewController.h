@@ -10,4 +10,6 @@
 
 @interface TXViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIView *myview;
+
 @end

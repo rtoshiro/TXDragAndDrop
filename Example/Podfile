@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+pod 'TXSwizzling', "~>1.0.2"
+
 target 'TXDragAndDrop_Example', :exclusive => true do
   pod "TXDragAndDrop", :path => "../"
 end
@@ -12,4 +14,5 @@ target 'TXDragAndDrop_Tests', :exclusive => true do
   pod 'Expecta'
   pod 'FBSnapshotTestCase'
   pod 'Expecta+Snapshots'
+
 end
