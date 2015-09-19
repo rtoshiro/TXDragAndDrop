@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AE435D0749BF1C9CA9243B21'
-               BlueprintName = 'TXDragAndDrop'
+               BlueprintIdentifier = '4C37AF0356FFA573C6348CA3'
+               BlueprintName = 'TXSwizzling'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TXDragAndDrop.framework'>
+               BuildableName = 'TXSwizzling.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

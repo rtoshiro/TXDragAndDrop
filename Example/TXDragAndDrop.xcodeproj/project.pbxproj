@@ -22,6 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8EEAA2821BAC4A93008B0EAA /* TXSwizzling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEAA2811BAC4A93008B0EAA /* TXSwizzling.framework */; };
 		EB68F45AD4972FF6D34BF76E /* Pods_TXDragAndDrop_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB34DD5077293A74B387B61 /* Pods_TXDragAndDrop_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F5CDACD6989AEAB1D31C732B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C05F9B1D473C2D1AA176AD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8EEAA2811BAC4A93008B0EAA /* TXSwizzling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TXSwizzling.framework; path = "Pods/../build/Debug-iphoneos/TXSwizzling.framework"; sourceTree = "<group>"; };
 		8EF1B3551BA9D5F1000B1482 /* TXDragAndDrop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TXDragAndDrop.framework; path = "Pods/../build/Debug-iphoneos/TXDragAndDrop.framework"; sourceTree = "<group>"; };
 		B61433E44F707E6F07839C9A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E0368EFD81CD559DCFC17D33 /* Pods-TXDragAndDrop_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXDragAndDrop_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TXDragAndDrop_Example/Pods-TXDragAndDrop_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				0A0257E0BF49E71FC480135F /* Pods_TXDragAndDrop_Example.framework in Frameworks */,
 				F5CDACD6989AEAB1D31C732B /* Pods.framework in Frameworks */,
+				8EEAA2821BAC4A93008B0EAA /* TXSwizzling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +124,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EEAA2811BAC4A93008B0EAA /* TXSwizzling.framework */,
 				8EF1B3551BA9D5F1000B1482 /* TXDragAndDrop.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,

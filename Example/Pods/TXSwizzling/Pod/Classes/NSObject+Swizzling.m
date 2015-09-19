@@ -35,6 +35,7 @@ static const int kswizzlingPropertiesKey;
     [properties release];
 #endif
   }
+  
   return properties;
 }
 
@@ -57,39 +58,51 @@ static const int kswizzlingPropertiesKey;
   }
 }
 
-- (void)swizzleSelector:(SEL)originalSelector to:(SEL)newSelector {
+- (void)subclassSwizzlingSelector:(SEL)originalSelector to:(SEL)newSelector
+{
   Class currentClass = object_getClass(self);
   NSString *currentClassName = NSStringFromClass(currentClass);
   
-  // Create a new subclass
+  // Creates new subclass
   if (![self swizzlingProperties].subclassName)
   {
     [self swizzlingProperties].originalName = currentClassName;
-    [self swizzlingProperties].subclassName = [currentClassName stringByAppendingString:[[NSUUID UUID] UUIDString]];
-    Class newClass = objc_allocateClassPair(currentClass, [[self swizzlingProperties].subclassName cStringUsingEncoding:NSUTF8StringEncoding], 0);
+    [self swizzlingProperties].subclassName = [[self swizzlingProperties].originalName stringByAppendingString:[[NSUUID UUID] UUIDString]];
+    Class newClass = objc_allocateClassPair(currentClass, [[self swizzlingProperties].subclassName cStringUsingEncoding:NSUTF8StringEncoding], 0);    
     objc_registerClassPair(newClass);
   }
-  
+//  
   Class newClass = objc_getClass([[self swizzlingProperties].subclassName cStringUsingEncoding:NSUTF8StringEncoding]);
 //  Class origClass = objc_getClass([[self swizzlingProperties].originalName cStringUsingEncoding:NSUTF8StringEncoding]);
 
-  Method originalMethod = class_getInstanceMethod(newClass, originalSelector);
-  Method newMethod = class_getInstanceMethod(newClass, newSelector);
-
-  BOOL methodAdded = class_addMethod(newClass,
-                                     originalSelector,
-                                     method_getImplementation(newMethod),
-                                     method_getTypeEncoding(newMethod));
   
-  if (methodAdded) {
-    class_replaceMethod(newClass,
-                        newSelector,
-                        method_getImplementation(originalMethod),
-                        method_getTypeEncoding(originalMethod));
-  } else {
-    method_exchangeImplementations(originalMethod, newMethod);
-  }
+  
+  [newClass swizzleSelector:originalSelector to:newSelector];
+//  Method originalMethod = class_getInstanceMethod(origClass, originalSelector);
+//  Method newMethod = class_getInstanceMethod(origClass, newSelector);
+//  
+//  method_exchangeImplementations(originalMethod, newMethod);
 
+  
+//
+//  BOOL methodAdded = class_addMethod(newClass,
+//                                     originalSelector,
+//                                     method_getImplementation(newMethod),
+//                                     method_getTypeEncoding(newMethod));
+//  
+//  if (methodAdded) {
+//    class_replaceMethod(newClass,
+//                        newSelector,
+//                        method_getImplementation(originalMethod),
+//                        method_getTypeEncoding(originalMethod));
+//    NSLog(@"imp ");
+//  } else {
+//    method_exchangeImplementations(originalMethod, newMethod);
+//  }
+
+  
+  
+  
   if (![currentClassName isEqualToString:[self swizzlingProperties].subclassName])
     object_setClass(self, newClass);
 }

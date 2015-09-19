@@ -11,6 +11,6 @@
 @interface NSObject (Swizzling)
 
 + (void)swizzleSelector:(SEL)originalSelector to:(SEL)newSelector;
-- (void)swizzleSelector:(SEL)originalSelector to:(SEL)newSelector;
+- (void)subclassSwizzlingSelector:(SEL)originalSelector to:(SEL)newSelector;
 
 @end

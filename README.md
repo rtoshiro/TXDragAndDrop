@@ -2,7 +2,30 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Call ```setDraggingEnabled:``` to make a UIView draggable.
+
+You can restrict the dragging area throught ```setDraggingEdgeInsets:```.
+
+As Apple API docs said:
+
+Positive values cause the frame to be inset (or shrunk) by the specified amount. Negative values cause the frame to be outset (or expanded) by the specified amount.
+
+So, if you want to make UIView draggable to the left, restricting top and bottom, you can set your UIEdgeInsets as:
+
+```
+[self.myview setDraggingEdgeInsets:UIEdgeInsetsMake(0.f, -self.myview.frame.size.width, 0.f, 0.f)];
+
+```
+
+## API
+
+```
+- (void)setDraggingEnabled:(BOOL)draggingEnabled;
+- (BOOL)isDraggingEnabled;
+
+- (void)setDraggingEdgeInsets:(UIEdgeInsets)edgeInsets;
+- (UIEdgeInsets)draggingEdgeInsets;
+```
 
 ## Installation
 
