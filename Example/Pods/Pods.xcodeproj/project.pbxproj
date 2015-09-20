@@ -99,6 +99,8 @@
 		8D32B0DF98A99A052BA3BB2B3877D5FB /* EXPMatchers+conformTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A87680087C018EB2C0DA92EAE7E286 /* EXPMatchers+conformTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D5BE13AC65FDA87D36EDA9B670A310A /* EXPMatchers+endWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DAD3CF25AC3E17FD75387F115695DC /* EXPMatchers+endWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E68650C609579C0FF910998F397E41B /* EXPExpect.h in Headers */ = {isa = PBXBuildFile; fileRef = 356A346C2BC4FAE7E73284F87236179B /* EXPExpect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EB5A1DD1BADC53500223392 /* TXSwizzling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7C7063DBEBCFAF479DFC1EA9C5E55B /* TXSwizzling.framework */; };
+		8EB5A1DE1BADC54700223392 /* TXSwizzling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7C7063DBEBCFAF479DFC1EA9C5E55B /* TXSwizzling.framework */; };
 		8EEE87367F66CD738A0A2E6123645DA2 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB18C09BDE7B74427491A8526A3D2D47 /* Expecta.framework */; };
 		8F608A934C30BFEF3E34CDC4CA1A1992 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D4212BF7FB4AF1CE4F04D9E8BCDFDC /* Pods-dummy.m */; };
 		90B346953F4767A4F9DBAA894193A19D /* ExpectaSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A4A6EF4BB58AA68AFCDDD7384F455 /* ExpectaSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -485,6 +487,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB5A1DE1BADC54700223392 /* TXSwizzling.framework in Frameworks */,
 				78E63C33906FAE36477EDE6B72D817AB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +496,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB5A1DD1BADC53500223392 /* TXSwizzling.framework in Frameworks */,
 				E885CC82BBE7D280AB0CD54D801A1C45 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

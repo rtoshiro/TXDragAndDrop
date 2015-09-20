@@ -23,7 +23,7 @@ static const int kdragAndDropPropertiesKey;
 @property (nonatomic, strong) NSString *originalName;
 @property (nonatomic, strong) NSString *subclassName;
 
-@property (nonatomic, strong) NSString *test;
+@property (nonatomic, assign) BOOL alreadySubclassed;
 
 
 @end
@@ -52,8 +52,9 @@ static const int kdragAndDropPropertiesKey;
 
 - (void)setDraggingEnabled:(BOOL)draggingEnabled {
   [self dragAndDropProperties].draggingEnabled = draggingEnabled;
-  if (draggingEnabled)
+  if (draggingEnabled && ![self dragAndDropProperties].alreadySubclassed)
   {
+    [self dragAndDropProperties].alreadySubclassed = YES;
     [self subclassSwizzlingSelector:@selector(touchesBegan:withEvent:) to:@selector(txTouchesBegan:withEvent:)];
     [self subclassSwizzlingSelector:@selector(touchesMoved:withEvent:) to:@selector(txTouchesMoved:withEvent:)];
     [self subclassSwizzlingSelector:@selector(touchesEnded:withEvent:) to:@selector(txTouchesEnded:withEvent:)];
@@ -132,11 +133,13 @@ static const int kdragAndDropPropertiesKey;
 - (void)txTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
   [super touchesEnded:touches withEvent:event];
+  [self dragAndDropProperties].currentPoint = CGPointZero;
 }
 
 - (void)txTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
   [super touchesCancelled:touches withEvent:event];
+  [self dragAndDropProperties].currentPoint = CGPointZero;
 }
 
 @end

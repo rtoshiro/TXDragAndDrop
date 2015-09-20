@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "90CF9527C44F6CF207D5BCF23033172CB11D0635",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "ba156859-9f85-4971-86de-2e3f79c13a09" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "90CF9527C44F6CF207D5BCF23033172CB11D0635" : 0,
+    "ba156859-9f85-4971-86de-2e3f79c13a09" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4CF1907D-2D74-4E7F-89A0-328C8A81111A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "90CF9527C44F6CF207D5BCF23033172CB11D0635" : "TXDragAndDrop\/",
+    "ba156859-9f85-4971-86de-2e3f79c13a09" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TXDragAndDrop",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/TXDragAndDrop.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rtoshiro\/TXDragAndDrop.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "90CF9527C44F6CF207D5BCF23033172CB11D0635"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/kongros.svn.cloudforge.com\/voltemios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ba156859-9f85-4971-86de-2e3f79c13a09"
+    }
+  ]
+}
